@@ -1,0 +1,8 @@
+graphene
+sqlalchemy
+graphene-sqlalchemy
+uvicorn
+
+# test deps
+pytest
+requests
