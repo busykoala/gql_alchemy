@@ -6,3 +6,8 @@ uvicorn
 # test deps
 pytest
 requests
+
+# linting
+black
+isort
+flake8

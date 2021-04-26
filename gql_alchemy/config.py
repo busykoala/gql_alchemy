@@ -1,9 +1,8 @@
-from pathlib import Path
 import os
 import tempfile
+from pathlib import Path
 
 from alembic.config import Config as AlembicCfg
-
 
 root_path = Path(".")
 

@@ -1,5 +1,9 @@
 # FastAPI & GraphQL
 
+This is an example for using GraphQL with SQLAlchemy and FastAPI.
+Do not use this in production for multiple reasons
+(graphqli is activated, dev/prod packages are not separated, ...).
+
 ## Install
 
 ```
@@ -10,6 +14,14 @@ pip install -r requirements.txt
 
 ```
 uvicorn gql_alchemy.app:app [--reload]
+```
+
+## Testing
+
+```
+export TESTING=True
+pytest
+unset TESTING
 ```
 
 ## Migrations
@@ -23,12 +35,4 @@ alembic revision --autogenerate -m "Name of the revision"
 
 # more options
 alembic --help
-```
-
-## Testing
-
-```
-export TESTING=True
-pytest
-unset TESTING
 ```

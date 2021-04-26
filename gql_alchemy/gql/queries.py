@@ -17,6 +17,8 @@ class GqlQuery(ObjectType):
     # Build own query by arguments
     user_by_id = UserByIdConn(
         UserNode.connection,
-        args={"pk": GqlArgument(GqlString), },
+        args={
+            "pk": GqlArgument(GqlString),
+        },
         required=True,
     )

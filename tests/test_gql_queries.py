@@ -10,11 +10,11 @@ def test_all_user_query(client):
     )
 
     expected = {
-        'data': {
-            'allUsers': {
-                'edges': [
-                    {'node': {'familyName': 'Miller', 'givenName': 'Peter'}},
-                    {'node': {'familyName': 'Milton', 'givenName': 'Anna'}}
+        "data": {
+            "allUsers": {
+                "edges": [
+                    {"node": {"familyName": "Miller", "givenName": "Peter"}},
+                    {"node": {"familyName": "Milton", "givenName": "Anna"}},
                 ]
             }
         }
@@ -31,10 +31,10 @@ def test_get_user_by_pk_query(client):
     )
 
     expected = {
-        'data': {
-            'userById': {
-                'edges': [
-                    {'node': {'familyName': 'Miller', 'givenName': 'Peter'}}
+        "data": {
+            "userById": {
+                "edges": [
+                    {"node": {"familyName": "Miller", "givenName": "Peter"}}
                 ]
             }
         }

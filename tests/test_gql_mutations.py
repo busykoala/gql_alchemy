@@ -8,10 +8,10 @@ def test_add_user_mutation(client):
     )
 
     expected = {
-        'data': {
-            'addUser': {
-                'user': {'givenName': 'Elisabeth', 'familyName': 'Müller'},
-                'ok': True
+        "data": {
+            "addUser": {
+                "user": {"givenName": "Elisabeth", "familyName": "Müller"},
+                "ok": True,
             }
         }
     }

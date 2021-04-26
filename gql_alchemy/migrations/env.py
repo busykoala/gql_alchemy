@@ -1,9 +1,10 @@
 from logging.config import fileConfig
 
 from alembic import context
-from gql_alchemy.database import Base
 from sqlalchemy import engine_from_config
 from sqlalchemy import pool
+
+from gql_alchemy.database import Base
 
 from gql_alchemy.config import get_conf  # noqa  # isort:skip
 
@@ -50,7 +51,9 @@ def run_migrations_online():
     )
 
     with connectable.connect() as connection:
-        context.configure(connection=connection, target_metadata=target_metadata)
+        context.configure(
+            connection=connection, target_metadata=target_metadata
+        )
 
         with context.begin_transaction():
             context.run_migrations()

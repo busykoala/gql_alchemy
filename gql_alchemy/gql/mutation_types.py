@@ -5,8 +5,8 @@ from graphene import String
 
 from gql_alchemy.database import db_session
 from gql_alchemy.gql.schemas import UserNode
-from gql_alchemy.models.user import User
 from gql_alchemy.gql.types import UserType
+from gql_alchemy.models.user import User
 
 
 class AddUser(Mutation):
@@ -20,8 +20,8 @@ class AddUser(Mutation):
     def mutate(self, info, given_name, family_name):
         try:
             user_data = UserType(
-                given_name=given_name,
-                family_name=family_name)
+                given_name=given_name, family_name=family_name
+            )
             new_user = User(**user_data.dict())
             db_session.add(new_user)
             db_session.commit()
