@@ -6,6 +6,7 @@ from starlette.graphql import GraphQLApp
 from gql_alchemy.database import Base
 from gql_alchemy.database import engine
 from gql_alchemy.gql.queries import GqlQuery
+from gql_alchemy.gql.mutations import GqlMutation
 from gql_alchemy.config import get_conf
 
 
@@ -28,7 +29,7 @@ app.add_route(
     GraphQLApp(
         schema=Schema(
             query=GqlQuery,
-            # mutation=GqlMutation
+            mutation=GqlMutation
         ),
         graphiql=True
     ),
